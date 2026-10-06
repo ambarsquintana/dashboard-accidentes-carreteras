@@ -1,0 +1,5 @@
+relationship 6b8ae457-7a86-4052-8bdd-b2183c2c1673
+	joinOnDateBehavior: datePartOnly
+	fromColumn: accidentes.Fecha
+	toColumn: LocalDateTable_4e693788-ca7b-4254-a8c1-932659c00430.Date
+
