@@ -19,7 +19,7 @@ Este proyecto nació en la inmersión «Acelerador de Carrera con Power BI» de 
 - Perfilado del dato y validaciones que detienen el proceso si una regla falla
 - Modelo estrella en lugar de una sola tabla
 - Reporte en formato PBIP, legible como código
-- Documentación de requerimientos, arquitectura y mapeo fuente-destino
+- Documentación de requerimientos, arquitectura, mapeo fuente-destino y diccionario de datos
 - Todo el proyecto versionado en Git
 
 ---
@@ -27,7 +27,7 @@ Este proyecto nació en la inmersión «Acelerador de Carrera con Power BI» de 
 ## ⚙️ Estructura del proyecto
 
 ```
-├── docs/        # Requerimientos, arquitectura, mapeo y business case
+├── docs/        # Requerimientos, arquitectura, mapeo, diccionario y business case
 ├── data/
 │   ├── raw/     # Archivo fuente, no se modifica
 │   ├── bronze/  # Copia fiel de la fuente en Parquet (no versionado)
@@ -60,6 +60,7 @@ El perfilado de bronze define las reglas de limpieza que aplica silver. Cada cap
 | [Requerimientos](docs/01_requerimientos.md) | Objetivo, usuarios, requerimientos, alcance y criterios de aceptación |
 | [Arquitectura](docs/02_arquitectura.md) | Flujo de datos, capas, herramientas y decisiones de diseño |
 | [Mapeo fuente-destino](docs/03_mapeo_fuente_destino.md) | Cómo cambia cada columna entre capas |
+| [Diccionario de datos](docs/04_diccionario_datos.md) | Tablas y columnas de la capa gold |
 | [Perfilado de bronze](exploration/01_perfilado_bronze.ipynb) | Análisis de calidad del dato y hallazgos |
 
 ## 🚀 Instalación y ejecución
@@ -90,7 +91,7 @@ El perfilado de bronze define las reglas de limpieza que aplica silver. Cada cap
 - [x] Capa bronze
 - [x] Perfilado del dato
 - [x] Capa silver y mapeo fuente-destino
-- [ ] Capa gold y diccionario de datos
+- [x] Capa gold y diccionario de datos
 - [ ] Definición de métricas
 - [ ] Modelo semántico
 - [ ] Reporte

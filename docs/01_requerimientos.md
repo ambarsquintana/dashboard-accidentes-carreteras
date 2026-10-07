@@ -5,8 +5,8 @@
 | **Proyecto** | Seguimiento de accidentes en carreteras federales |
 | **Solicitante** | Dirección |
 | **Responsable** | Equipo de Analytics |
-| **Versión** | 1.0 |
-| **Fecha** | 2026-10-06 |
+| **Versión** | 1.1 |
+| **Fecha** | 2026-10-07 |
 
 ## Contexto
 
@@ -31,16 +31,14 @@ Dar a la Dirección una vista única de los accidentes en carreteras federales e
 | RF-01 | Total de eventos ocurridos | Solicitud de la Dirección |
 | RF-02 | Eventos por hora del día | Solicitud de la Dirección |
 | RF-03 | Eventos por día de la semana | Solicitud de la Dirección |
-| RF-04 | Eventos por estación del año | Solicitud de la Dirección |
-| RF-05 | Total de fallecidos y de heridos | Solicitud de la Dirección |
-| RF-06 | Mapa con la geolocalización de los eventos | Solicitud de la Dirección |
-| RF-07 | Top 7 de causas de accidentes | Solicitud de la Dirección |
-| RF-08 | Accidentes con más de 3 víctimas | Solicitud de la Dirección |
-| RF-09 | Filtros por mes, año y clasificación del accidente | Solicitud de la Dirección |
-| RF-10 | Toda la información en una sola página | Solicitud de la Dirección |
-| RF-11 | Eventos por estado, con su participación sobre el total | Propuesta de Analytics |
-| RF-12 | Tendencia mensual de eventos y heridos | Propuesta de Analytics |
-| RF-13 | Eventos por tipo de carril | Propuesta de Analytics |
+| RF-04 | Total de fallecidos y de heridos | Solicitud de la Dirección |
+| RF-05 | Mapa con la geolocalización de los eventos | Solicitud de la Dirección |
+| RF-06 | Top 7 de causas de accidentes | Solicitud de la Dirección |
+| RF-07 | Filtros por año y clasificación del accidente | Solicitud de la Dirección |
+| RF-08 | Toda la información en una sola página | Solicitud de la Dirección |
+| RF-09 | Eventos por estado, con su participación sobre el total | Propuesta de Analytics |
+| RF-10 | Tendencia mensual de eventos y heridos | Propuesta de Analytics |
+| RF-11 | Eventos por tipo de carril | Propuesta de Analytics |
 
 ## Requerimientos no funcionales
 
@@ -50,13 +48,6 @@ Dar a la Dirección una vista única de los accidentes en carreteras federales e
 | RNF-02 | Las cifras del reporte coinciden con las de la capa gold y con las cifras de control |
 | RNF-03 | El reporte se versiona en formato PBIP |
 | RNF-04 | El reporte sigue la plantilla visual definida en `assets/Template.png` |
-
-## Definiciones pendientes
-
-| Tema | Pregunta | Responsable | Estado |
-|---|---|---|---|
-| Víctimas (RF-08) | ¿Se cuentan solo los fallecidos, o fallecidos más heridos? Con fallecidos son 44 accidentes; con fallecidos y heridos, 2.231 | Área estratégica | Abierta |
-| Estación del año (RF-04) | Las estaciones corresponden al hemisferio sur. ¿Se usan las fechas astronómicas o trimestres de meses completos? | Área estratégica | Abierta |
 
 ## Alcance
 
@@ -71,6 +62,7 @@ Dar a la Dirección una vista única de los accidentes en carreteras federales e
 
 - Fuentes adicionales o años posteriores a 2020
 - Detalle por persona o por vehículo
+- Análisis por estación del año, por municipio, por tipo de accidente y por número de víctimas por accidente
 - Modelos predictivos y alertas
 - Seguridad por filas: los datos no contienen información personal
 
@@ -109,3 +101,4 @@ Además:
 | Versión | Fecha | Cambio |
 |---|---|---|
 | 1.0 | 2026-10-06 | Versión inicial |
+| 1.1 | 2026-10-07 | Se alinean los requerimientos funcionales con el reporte entregado: se retiran eventos por estación del año y accidentes con más de 3 víctimas, y el filtro por mes. Se renumeran los requerimientos y se cierran las definiciones pendientes |
