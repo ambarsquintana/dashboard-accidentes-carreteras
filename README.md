@@ -16,8 +16,10 @@ Este proyecto nació en la inmersión «Acelerador de Carrera con Power BI» de 
 **Lo que agrega este repositorio**
 
 - ETL Medallion (bronze, silver, gold) con Python y pandas
+- Perfilado del dato y validaciones que detienen el proceso si una regla falla
 - Modelo estrella en lugar de una sola tabla
 - Reporte en formato PBIP, legible como código
+- Documentación de requerimientos, arquitectura y mapeo fuente-destino
 - Todo el proyecto versionado en Git
 
 ---
@@ -25,13 +27,14 @@ Este proyecto nació en la inmersión «Acelerador de Carrera con Power BI» de 
 ## ⚙️ Estructura del proyecto
 
 ```
-├── docs/        # Business case original de la clase
+├── docs/        # Requerimientos, arquitectura, mapeo y business case
 ├── data/
 │   ├── raw/     # Archivo fuente, no se modifica
 │   ├── bronze/  # Copia fiel de la fuente en Parquet (no versionado)
 │   ├── silver/  # Datos limpios y tipados (no versionado)
 │   └── gold/    # Modelo estrella para Power BI (no versionado)
 ├── etl/         # Notebooks de cada capa
+├── exploration/ # Perfilado del dato, fuera del pipeline
 ├── powerbi/     # Proyecto .pbip: modelo semántico (TMDL) y reporte
 ├── assets/      # Template y recursos visuales
 ├── requirements.txt  # Dependencias de Python
@@ -47,6 +50,17 @@ Este proyecto nació en la inmersión «Acelerador de Carrera con Power BI» de 
 | 🥈 Silver | Datos limpios, tipados y validados | Parquet |
 | 🥇 Gold | Modelo estrella: hecho de accidentes y dimensiones | Parquet |
 | 📊 Reporte | Modelo semántico y dashboard | Power BI (PBIP) |
+
+El perfilado de bronze define las reglas de limpieza que aplica silver. Cada capa valida sus datos antes de escribir.
+
+## 📚 Documentación
+
+| Documento | Contenido |
+|---|---|
+| [Requerimientos](docs/01_requerimientos.md) | Objetivo, usuarios, requerimientos, alcance y criterios de aceptación |
+| [Arquitectura](docs/02_arquitectura.md) | Flujo de datos, capas, herramientas y decisiones de diseño |
+| [Mapeo fuente-destino](docs/03_mapeo_fuente_destino.md) | Cómo cambia cada columna entre capas |
+| [Perfilado de bronze](exploration/01_perfilado_bronze.ipynb) | Análisis de calidad del dato y hallazgos |
 
 ## 🚀 Instalación y ejecución
 
@@ -65,20 +79,22 @@ Este proyecto nació en la inmersión «Acelerador de Carrera con Power BI» de 
    pip install -r requirements.txt
    ```
 
-3. Ejecutar los notebooks de `etl/` en orden. Cada uno genera su capa en `data/`, que no se versiona porque se reconstruye desde la fuente.
+3. Ejecutar los notebooks de `etl/` en orden: `01_bronze` y luego `02_silver`. Cada uno genera su capa en `data/`, que no se versiona porque se reconstruye desde la fuente.
 4. Abrir `powerbi/accidentes-carreteras.pbip` en Power BI Desktop.
 
 ## 📌 Estado
 
 - [x] Estructura del repositorio y formato .pbip
 - [x] Business case
-- [ ] Perfilado del dato
-- [ ] Capa bronze
-- [ ] Capa silver
-- [ ] Capa gold
+- [x] Requerimientos y arquitectura
+- [x] Capa bronze
+- [x] Perfilado del dato
+- [x] Capa silver y mapeo fuente-destino
+- [ ] Capa gold y diccionario de datos
+- [ ] Definición de métricas
 - [ ] Modelo semántico
 - [ ] Reporte
-- [ ] Pruebas y documentación
+- [ ] Validación contra cifras de control
 
 ## 🙌 Créditos
 
