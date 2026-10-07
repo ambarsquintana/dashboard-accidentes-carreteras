@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "4c5392acbba2ffaa42cf",
   "position": {
-    "x": 22.857142857142858,
-    "y": 348.57142857142861,
-    "z": 9000,
-    "height": 151.42857142857144,
-    "width": 378.57142857142861,
-    "tabOrder": 9000
+    "x": 23.341645885286781,
+    "y": 348.32917705735662,
+    "z": 4000,
+    "height": 151.72069825436409,
+    "width": 377.95511221945134,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "dim_hora"
                     }
                   },
                   "Property": "hora"
                 }
               },
-              "queryRef": "registro_acidente.hora",
-              "nativeQueryRef": "hora",
-              "active": true
+              "queryRef": "dim_hora.hora",
+              "nativeQueryRef": "Hora",
+              "active": true,
+              "displayName": "Hora"
             }
           ]
         },
@@ -36,22 +37,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "accidentes"
-                        }
-                      },
-                      "Property": "id"
+                    "SourceRef": {
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Function": 5
+                  "Property": "Total Eventos"
                 }
               },
-              "queryRef": "Sum(registro_acidente.id)",
-              "nativeQueryRef": "Recuento de id"
+              "queryRef": "_Medidas.Total Eventos",
+              "nativeQueryRef": "Total Eventos"
             }
           ]
         }
@@ -60,16 +56,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "accidentes"
+                    "Entity": "_Medidas"
                   }
                 },
-                "Property": "hora"
+                "Property": "Total Eventos"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ],
         "isDefaultSort": true
@@ -96,7 +92,7 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -113,6 +109,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "concatenateLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -121,6 +124,34 @@
         {
           "properties": {
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "roundRange": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "logAxisScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "invertAxis": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -176,6 +207,19 @@
         }
       ],
       "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
         {
           "properties": {
             "show": {

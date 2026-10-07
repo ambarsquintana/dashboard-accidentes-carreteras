@@ -1,0 +1,36 @@
+/// Causa principal registrada para cada accidente.
+table dim_causa
+	lineageTag: 5c196d78-3f9b-52ec-a854-58f1d388a191
+
+	/// Llave subrogada
+	column causa_key
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 6220bfad-a548-5e6d-97b4-37b89f495764
+		summarizeBy: none
+		sourceColumn: causa_key
+
+		annotation SummarizationSetBy = User
+
+	/// Descripción de la causa
+	column causa_accidente
+		dataType: string
+		lineageTag: 72088b8d-8336-5be0-a396-580018c1c840
+		summarizeBy: none
+		sourceColumn: causa_accidente
+
+		annotation SummarizationSetBy = User
+
+	partition dim_causa = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents(RutaProyecto & "\data\gold\dim_causa.parquet")),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen, {{"causa_key", Int64.Type}, {"causa_accidente", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "1855e939f5cfe158a4b5",
+  "name": "a5a9d7df53d84faaeffb",
   "position": {
     "x": 918.40399002493768,
-    "y": 93.366583541147108,
-    "z": 0,
+    "y": 223.54114713216964,
+    "z": 12000,
     "height": 65.536159600997507,
     "width": 183.14214463840398,
-    "tabOrder": 0
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total Eventos"
+                  "Property": "Total Fallecidos"
                 }
               },
-              "queryRef": "_Medidas.Total Eventos",
-              "nativeQueryRef": "Eventos",
-              "displayName": "Eventos"
+              "queryRef": "_Medidas.Total Fallecidos",
+              "nativeQueryRef": "Fallecidos",
+              "displayName": "Fallecidos"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Total Eventos"
+                "Property": "Total Fallecidos"
               }
             },
             "direction": "Descending"
@@ -141,7 +141,7 @@
             }
           },
           "selector": {
-            "metadata": "_Medidas.Total Eventos"
+            "metadata": "_Medidas.Total Fallecidos"
           }
         }
       ],
@@ -215,7 +215,7 @@
           }
         }
       ],
-      "outline": [
+      "fillCustom": [
         {
           "properties": {
             "show": {
@@ -225,11 +225,26 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
+                }
+              }
+            }
           },
           "selector": {
-            "metadata": "_Medidas.Total Eventos"
+            "id": "default"
           }
-        },
+        }
+      ],
+      "outline": [
         {
           "properties": {
             "show": {
@@ -252,49 +267,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Medidas.Total Eventos"
-          }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "fillCustom": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "5L"
                 }
               }
             }
@@ -364,7 +336,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "d28ec5291b6df2cc669d",
+        "name": "c81845e45a0a7ebeb9bd",
         "field": {
           "Measure": {
             "Expression": {
@@ -372,7 +344,7 @@
                 "Entity": "_Medidas"
               }
             },
-            "Property": "Total Eventos"
+            "Property": "Total Fallecidos"
           }
         },
         "type": "Advanced"

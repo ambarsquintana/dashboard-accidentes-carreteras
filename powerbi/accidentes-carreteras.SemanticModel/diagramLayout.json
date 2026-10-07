@@ -10,33 +10,98 @@
       "nodes": [
         {
           "location": {
-            "x": 711,
-            "y": 81
+            "x": 555,
+            "y": 395
           },
-          "nodeIndex": "Totales",
-          "nodeLineageTag": "38875f2d-b409-4388-8d24-9ac9546e9f55",
+          "nodeIndex": "fact_accidentes",
+          "nodeLineageTag": "5042fabd-eb88-5221-b790-938878739344",
           "size": {
-            "height": 200,
-            "width": 234
+            "height": 371.65018235598427,
+            "width": 340
           },
           "zIndex": 1
         },
         {
           "location": {
-            "x": 383,
-            "y": 11
+            "x": 605.416970593307,
+            "y": 0
           },
-          "nodeIndex": "accidentes",
-          "nodeLineageTag": "9662bdfb-7d5f-4fa5-8478-fb6ba36a7494",
+          "nodeIndex": "dim_calendario",
+          "nodeLineageTag": "2de7b2f4-a2a2-5c74-a83f-26dc6d9330c2",
           "size": {
-            "height": 610,
-            "width": 309
+            "height": 252.51404148617488,
+            "width": 260
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 172.79487120967258,
+            "y": 270.92002507489025
+          },
+          "nodeIndex": "dim_hora",
+          "nodeLineageTag": "098d386c-9bf1-525b-a122-935b656e0794",
+          "size": {
+            "height": 150,
+            "width": 260
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 181.59401641128468,
+            "y": 701.0109870045917
+          },
+          "nodeIndex": "dim_ubicacion",
+          "nodeLineageTag": "eefa747a-c947-5d7c-b2fb-d82fb88d11c9",
+          "size": {
+            "height": 170,
+            "width": 260
           },
           "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1002.7387052649731,
+            "y": 246.03906997694151
+          },
+          "nodeIndex": "dim_causa",
+          "nodeLineageTag": "5c196d78-3f9b-52ec-a854-58f1d388a191",
+          "size": {
+            "height": 150,
+            "width": 260
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1003.6825393202732,
+            "y": 718.0219740091834
+          },
+          "nodeIndex": "dim_caracteristicas",
+          "nodeLineageTag": "7ed739b2-c231-5e7e-b349-509df8b07f12",
+          "size": {
+            "height": 170,
+            "width": 260
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "3fc89bdd-6d09-5fa2-a4e3-c67e68980867",
+          "size": {
+            "height": 207.59829040322415,
+            "width": 260
+          },
+          "zIndex": 4
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 100,
+      "zoomValue": 79.553182037699813,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

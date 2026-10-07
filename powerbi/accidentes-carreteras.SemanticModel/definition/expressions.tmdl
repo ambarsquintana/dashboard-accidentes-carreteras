@@ -1,0 +1,6 @@
+/// Carpeta raíz del repositorio en el equipo local. Es la única ruta que se cambia al clonar el proyecto
+expression RutaProyecto = "C:\Users\Ambar\source\dashboard-accidentes-carreteras" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 925f25c9-7e27-5feb-b52c-421d845dbe18
+
+	annotation PBI_ResultType = Text
+

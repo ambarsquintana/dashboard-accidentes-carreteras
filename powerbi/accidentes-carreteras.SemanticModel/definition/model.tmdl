@@ -6,16 +6,19 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["accidentes"]
+annotation PBI_QueryOrder = ["RutaProyecto","fact_accidentes","dim_calendario","dim_hora","dim_ubicacion","dim_causa","dim_caracteristicas","_Medidas"]
 
-annotation __PBI_TimeIntelligenceEnabled = 1
+annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
-ref table accidentes
-ref table DateTableTemplate_99eccd66-1c0c-496d-bea2-7b63de56e62f
-ref table LocalDateTable_4e693788-ca7b-4254-a8c1-932659c00430
-ref table Totales
+ref table _Medidas
+ref table fact_accidentes
+ref table dim_calendario
+ref table dim_hora
+ref table dim_ubicacion
+ref table dim_causa
+ref table dim_caracteristicas
 
 ref cultureInfo en-US
 

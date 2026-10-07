@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "09739cbed9d8d1c43906",
   "position": {
-    "x": 422.85714285714289,
-    "y": 348.57142857142861,
-    "z": 8000,
-    "height": 138.57142857142858,
-    "width": 341,
-    "tabOrder": 8000
+    "x": 422.84289276807976,
+    "y": 348.32917705735662,
+    "z": 3000,
+    "height": 151.72069825436409,
+    "width": 341.147132169576,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "columnChart",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "dia_semana"
+                  "Property": "nombre_dia_semana"
                 }
               },
-              "queryRef": "registro_acidente.dia_semana",
-              "nativeQueryRef": "dia_semana",
-              "active": true
+              "queryRef": "dim_calendario.nombre_dia_semana",
+              "nativeQueryRef": "Día",
+              "active": true,
+              "displayName": "Día"
             }
           ]
         },
@@ -36,22 +37,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "accidentes"
-                        }
-                      },
-                      "Property": "id"
+                    "SourceRef": {
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Function": 5
+                  "Property": "Total Eventos"
                 }
               },
-              "queryRef": "Sum(registro_acidente.id)",
-              "nativeQueryRef": "Recuento de id"
+              "queryRef": "_Medidas.Total Eventos",
+              "nativeQueryRef": "Total Eventos"
             }
           ]
         }
@@ -63,10 +59,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "accidentes"
+                    "Entity": "dim_calendario"
                   }
                 },
-                "Property": "dia_semana"
+                "Property": "nombre_dia_semana"
               }
             },
             "direction": "Ascending"
@@ -134,6 +130,32 @@
     },
     "visualContainerObjects": {
       "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
         {
           "properties": {
             "show": {

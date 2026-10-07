@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "363ade1c7c5193fefe9a",
   "position": {
-    "x": 23.333333333333336,
-    "y": 545,
-    "z": 13000,
-    "height": 153.33333333333334,
-    "width": 378.33333333333337,
-    "tabOrder": 13000
+    "x": 4.4887780548628431,
+    "y": 539.55112219451371,
+    "z": 8000,
+    "height": 170.573566084788,
+    "width": 411.17206982543638,
+    "tabOrder": 8000
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "dim_causa"
                     }
                   },
                   "Property": "causa_accidente"
                 }
               },
-              "queryRef": "accidentes.causa_accidente",
-              "nativeQueryRef": "causa_accidente",
-              "active": true
+              "queryRef": "dim_causa.causa_accidente",
+              "nativeQueryRef": "Causa del accidente",
+              "active": true,
+              "displayName": "Causa del accidente"
             }
           ]
         },
@@ -36,21 +37,16 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "accidentes"
-                        }
-                      },
-                      "Property": "id"
+                    "SourceRef": {
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Eventos"
                 }
               },
-              "queryRef": "Sum(accidentes.id)",
+              "queryRef": "_Medidas.Total Eventos",
               "nativeQueryRef": "Total",
               "displayName": "Total"
             }
@@ -61,18 +57,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "accidentes"
-                      }
-                    },
-                    "Property": "id"
+                  "SourceRef": {
+                    "Entity": "_Medidas"
                   }
                 },
-                "Function": 0
+                "Property": "Total Eventos"
               }
             },
             "direction": "Descending"
@@ -92,10 +83,31 @@
                 }
               }
             },
-            "showAxisTitle": {
+            "preferredCategoryWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "initialScrollPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'start'"
+                }
+              }
+            },
+            "switchAxisPosition": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
                 }
               }
             }
@@ -105,27 +117,21 @@
       "valueAxis": [
         {
           "properties": {
-            "show": {
+            "roundRange": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "invertAxis": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
+            "logAxisScale": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -139,7 +145,48 @@
                 }
               }
             },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
             "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -160,6 +207,46 @@
                       "Value": "'#094780'"
                     }
                   }
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showOnValueAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "ribbonBands": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -193,6 +280,58 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -206,7 +345,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "accidentes"
+                "Entity": "dim_causa"
               }
             },
             "Property": "causa_accidente"
@@ -224,8 +363,13 @@
                     "Version": 2,
                     "From": [
                       {
-                        "Name": "a",
-                        "Entity": "accidentes",
+                        "Name": "d",
+                        "Entity": "dim_causa",
+                        "Type": 0
+                      },
+                      {
+                        "Name": "m",
+                        "Entity": "_Medidas",
                         "Type": 0
                       }
                     ],
@@ -234,7 +378,7 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "a"
+                              "Source": "d"
                             }
                           },
                           "Property": "causa_accidente"
@@ -246,31 +390,26 @@
                       {
                         "Direction": 2,
                         "Expression": {
-                          "Aggregation": {
+                          "Measure": {
                             "Expression": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "a"
-                                  }
-                                },
-                                "Property": "id"
+                              "SourceRef": {
+                                "Source": "m"
                               }
                             },
-                            "Function": 0
+                            "Property": "Total Eventos"
                           }
                         }
                       }
                     ],
-                    "Top": 7
+                    "Top": 5
                   }
                 }
               },
               "Type": 2
             },
             {
-              "Name": "a",
-              "Entity": "accidentes",
+              "Name": "d",
+              "Entity": "dim_causa",
               "Type": 0
             }
           ],
@@ -283,7 +422,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "a"
+                            "Source": "d"
                           }
                         },
                         "Property": "causa_accidente"
@@ -302,21 +441,15 @@
         }
       },
       {
-        "name": "Filter023a4318d7ea7d1fb65f",
-        "ordinal": 1,
+        "name": "5df871bc33d41b783bbe",
         "field": {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "accidentes"
-                  }
-                },
-                "Property": "id"
+              "SourceRef": {
+                "Entity": "_Medidas"
               }
             },
-            "Function": 0
+            "Property": "Total Eventos"
           }
         },
         "type": "Advanced"

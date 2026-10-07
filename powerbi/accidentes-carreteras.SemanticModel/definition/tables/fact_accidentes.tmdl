@@ -1,0 +1,129 @@
+/// Accidentes en carreteras federales, 2018-2020. Una fila por accidente.
+table fact_accidentes
+	lineageTag: 5042fabd-eb88-5221-b790-938878739344
+
+	/// Identificador del accidente en la fuente
+	column accidente_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 33a7044a-d4da-52a9-9ac0-b9d8a97f20f0
+		summarizeBy: none
+		sourceColumn: accidente_id
+
+		annotation SummarizationSetBy = User
+
+	/// Fecha del accidente. Llave a dim_calendario
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 8481b2c9-e619-558e-b55d-f7361d62895d
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Hora del día (0-23). Llave a dim_hora
+	column hora
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 512d84f1-ec22-5403-ae3e-62f0a683cf14
+		summarizeBy: none
+		sourceColumn: hora
+
+		annotation SummarizationSetBy = User
+
+	/// Llave a dim_ubicacion
+	column ubicacion_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9e18704e-8818-5787-b016-79a77ea48e15
+		summarizeBy: none
+		sourceColumn: ubicacion_key
+
+		annotation SummarizationSetBy = User
+
+	/// Llave a dim_causa
+	column causa_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 11da0a5c-1b0e-5cfe-b5df-d888cca1e496
+		summarizeBy: none
+		sourceColumn: causa_key
+
+		annotation SummarizationSetBy = User
+
+	/// Llave a dim_caracteristicas
+	column caracteristicas_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 665a4487-498b-5d56-b418-a813c9748078
+		summarizeBy: none
+		sourceColumn: caracteristicas_key
+
+		annotation SummarizationSetBy = User
+
+	/// Personas fallecidas. Usar la medida Total Fallecidos
+	column muertos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ed7c7937-60a6-5d01-aa02-317858a9b3c6
+		summarizeBy: none
+		sourceColumn: muertos
+
+		annotation SummarizationSetBy = User
+
+	/// Personas heridas. Usar la medida Total Heridos
+	column heridos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dea394ea-f742-5a7c-a55b-70c7ef8f5f14
+		summarizeBy: none
+		sourceColumn: heridos
+
+		annotation SummarizationSetBy = User
+
+	/// Latitud del accidente, en grados decimales
+	column latitud
+		dataType: double
+		lineageTag: 471b7e10-05f3-58ba-856f-7e28b8fcfe16
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: latitud
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Longitud del accidente, en grados decimales
+	column longitud
+		dataType: double
+		lineageTag: 7cb0b9f7-77b4-5602-98dd-0ca93ee5f3f2
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: longitud
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_accidentes = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents(RutaProyecto & "\data\gold\fact_accidentes.parquet")),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen, {{"accidente_id", Int64.Type}, {"fecha", type date}, {"hora", Int64.Type}, {"ubicacion_key", Int64.Type}, {"causa_key", Int64.Type}, {"caracteristicas_key", Int64.Type}, {"muertos", Int64.Type}, {"heridos", Int64.Type}, {"latitud", type number}, {"longitud", type number}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

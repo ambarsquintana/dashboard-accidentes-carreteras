@@ -1,0 +1,48 @@
+/// Tabla contenedora de las medidas del modelo
+table _Medidas
+	lineageTag: 3fc89bdd-6d09-5fa2-a4e3-c67e68980867
+
+	/// Número de accidentes registrados (RF-01)
+	measure 'Total Eventos' = COUNTROWS(fact_accidentes)
+		formatString: #,0
+		lineageTag: 40899426-77ef-5b9c-aae5-c7f4a95e8047
+
+	/// Personas heridas, leves y graves (RF-04)
+	measure 'Total Heridos' = SUM(fact_accidentes[heridos])
+		formatString: #,0
+		lineageTag: 1cc93917-8c53-5699-a238-d51530f4217a
+
+	/// Personas fallecidas (RF-04)
+	measure 'Total Fallecidos' = SUM(fact_accidentes[muertos])
+		formatString: #,0
+		lineageTag: 342ed618-cb02-5cf8-870c-01fc161d0e39
+
+	/// Participación de los eventos sobre el total de la selección actual. Respeta los filtros del reporte, por lo que siempre suma 100 % (RF-09)
+	measure '% Eventos' =
+			
+			DIVIDE(
+			    [Total Eventos],
+			    CALCULATE([Total Eventos], ALLSELECTED())
+			)
+		formatString: 0.00%
+		lineageTag: 46cd2e55-316f-59c1-8b05-57daf472561d
+
+	column Columna
+		dataType: string
+		isHidden
+		lineageTag: 331a6fd6-1488-56af-9fc9-d0b80aedfcf8
+		summarizeBy: none
+		sourceColumn: Columna
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = #table(type table [Columna = text], {})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
+

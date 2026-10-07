@@ -1,5 +1,20 @@
-relationship 6b8ae457-7a86-4052-8bdd-b2183c2c1673
-	joinOnDateBehavior: datePartOnly
-	fromColumn: accidentes.Fecha
-	toColumn: LocalDateTable_4e693788-ca7b-4254-a8c1-932659c00430.Date
+relationship 1a9651d8-1484-5fdf-a771-601e72556f21
+	fromColumn: fact_accidentes.fecha
+	toColumn: dim_calendario.fecha
+
+relationship f84da161-205d-560c-9d2a-3461fb65232d
+	fromColumn: fact_accidentes.hora
+	toColumn: dim_hora.hora
+
+relationship bdef1b26-b414-5d46-9c01-a7f01999db83
+	fromColumn: fact_accidentes.ubicacion_key
+	toColumn: dim_ubicacion.ubicacion_key
+
+relationship 85f36e40-65cc-59fe-9706-279afc34437e
+	fromColumn: fact_accidentes.causa_key
+	toColumn: dim_causa.causa_key
+
+relationship ee547d3a-e15f-536d-b27a-b157c38f91ae
+	fromColumn: fact_accidentes.caracteristicas_key
+	toColumn: dim_caracteristicas.caracteristicas_key
 

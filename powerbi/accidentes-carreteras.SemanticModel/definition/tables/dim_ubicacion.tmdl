@@ -1,0 +1,46 @@
+/// Estados de la región sudeste de Brasil incluidos en el análisis.
+table dim_ubicacion
+	lineageTag: eefa747a-c947-5d7c-b2fb-d82fb88d11c9
+
+	/// Llave subrogada
+	column ubicacion_key
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: 93d1e19e-c15a-5a52-b2b1-a25a28df0c93
+		summarizeBy: none
+		sourceColumn: ubicacion_key
+
+		annotation SummarizationSetBy = User
+
+	/// Sigla del estado: ES, MG, RJ o SP
+	column estado_sigla
+		dataType: string
+		lineageTag: 20f7a0f8-9aef-5950-a155-4fe77d0035a7
+		summarizeBy: none
+		sourceColumn: estado_sigla
+
+		annotation SummarizationSetBy = User
+
+	/// Nombre del estado
+	column estado
+		dataType: string
+		lineageTag: 6b7140ec-6cc2-5d86-9ad5-ec1d338407ce
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = User
+
+	partition dim_ubicacion = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents(RutaProyecto & "\data\gold\dim_ubicacion.parquet")),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen, {{"ubicacion_key", Int64.Type}, {"estado_sigla", type text}, {"estado", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

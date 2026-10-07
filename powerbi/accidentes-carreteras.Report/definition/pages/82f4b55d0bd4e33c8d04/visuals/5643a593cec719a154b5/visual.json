@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "5643a593cec719a154b5",
   "position": {
-    "x": 422.85714285714289,
-    "y": 544.28571428571433,
-    "z": 7000,
-    "height": 152.85714285714286,
-    "width": 341,
-    "tabOrder": 7000
+    "x": 422.66978922716629,
+    "y": 537.58001561280253,
+    "z": 2000,
+    "height": 160.87431693989072,
+    "width": 340.73380171740831,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "barChart",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "dim_caracteristicas"
                     }
                   },
-                  "Property": "tipo_pista"
+                  "Property": "tipo_carril"
                 }
               },
-              "queryRef": "registro_acidente.tipo_pista",
-              "nativeQueryRef": "tipo_pista",
-              "active": true
+              "queryRef": "dim_caracteristicas.tipo_carril",
+              "nativeQueryRef": "Carril",
+              "active": true,
+              "displayName": "Carril"
             }
           ]
         },
@@ -36,22 +37,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "accidentes"
-                        }
-                      },
-                      "Property": "id"
+                    "SourceRef": {
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Function": 5
+                  "Property": "Total Eventos"
                 }
               },
-              "queryRef": "Sum(registro_acidente.id)",
-              "nativeQueryRef": "Recuento de id"
+              "queryRef": "_Medidas.Total Eventos",
+              "nativeQueryRef": "Total Eventos"
             }
           ]
         }
@@ -60,18 +56,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "accidentes"
-                      }
-                    },
-                    "Property": "id"
+                  "SourceRef": {
+                    "Entity": "_Medidas"
                   }
                 },
-                "Function": 5
+                "Property": "Total Eventos"
               }
             },
             "direction": "Descending"
@@ -185,8 +176,53 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9c9645c2ba051736efd2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_caracteristicas"
+              }
+            },
+            "Property": "tipo_carril"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0bbe72b65d11ff8eba78",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Total Eventos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

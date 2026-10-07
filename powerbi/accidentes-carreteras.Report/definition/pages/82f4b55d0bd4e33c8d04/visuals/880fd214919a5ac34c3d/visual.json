@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "880fd214919a5ac34c3d",
   "position": {
-    "x": 20,
-    "y": 120,
-    "z": 15000,
-    "height": 180,
-    "width": 384,
-    "tabOrder": 15000
+    "x": 15.261845386533665,
+    "y": 111.3216957605985,
+    "z": 10000,
+    "height": 190.32418952618454,
+    "width": 395.01246882793015,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -20,42 +20,32 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "dim_ubicacion"
                     }
                   },
-                  "Property": "uf"
+                  "Property": "estado"
                 }
               },
-              "queryRef": "accidentes.uf",
+              "queryRef": "dim_ubicacion.estado",
               "nativeQueryRef": "Estado",
               "active": true,
               "displayName": "Estado"
             },
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "accidentes"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Fecha"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Level": "Year"
+                  "Property": "anio"
                 }
               },
-              "queryRef": "accidentes.Fecha.Variación.Date Hierarchy.Year",
-              "nativeQueryRef": "Fecha Year",
-              "active": false
+              "queryRef": "dim_calendario.anio",
+              "nativeQueryRef": "Año",
+              "active": false,
+              "displayName": "Año"
             }
           ]
         },
@@ -66,13 +56,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Property": "total_eventos"
+                  "Property": "Total Eventos"
                 }
               },
-              "queryRef": "accidentes.total_eventos",
+              "queryRef": "_Medidas.Total Eventos",
               "nativeQueryRef": "Eventos",
               "displayName": "Eventos"
             },
@@ -81,13 +71,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Property": "porcentaje_eventos"
+                  "Property": "% Eventos"
                 }
               },
-              "queryRef": "accidentes.porcentaje_eventos",
+              "queryRef": "_Medidas.% Eventos",
               "nativeQueryRef": "%",
               "displayName": "%"
             }
@@ -101,10 +91,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "accidentes"
+                    "Entity": "_Medidas"
                   }
                 },
-                "Property": "total_eventos"
+                "Property": "Total Eventos"
               }
             },
             "direction": "Descending"
@@ -120,7 +110,7 @@
         "levels": [
           {
             "queryRefs": [
-              "accidentes.uf"
+              "dim_ubicacion.estado"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -128,10 +118,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "dim_ubicacion"
                     }
                   },
-                  "Property": "uf"
+                  "Property": "estado"
                 }
               }
             ],
@@ -139,21 +129,9 @@
           },
           {
             "queryRefs": [
-              "accidentes.Fecha.Variación.Date Hierarchy.Year"
+              "dim_calendario.anio"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "LocalDateTable_4e693788-ca7b-4254-a8c1-932659c00430"
-                    }
-                  },
-                  "Property": "Year"
-                }
-              }
-            ],
             "isPinned": true
           }
         ],
@@ -184,6 +162,13 @@
                   "Value": "10D"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
             }
           }
         }
@@ -194,13 +179,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "177.21629424186128D"
+                  "Value": "119.2672774997336D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "accidentes.uf"
+            "metadata": "_Medidas.Total Eventos"
           }
         },
         {
@@ -208,26 +193,33 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "102.3333345350034D"
+                  "Value": "96.63748139690554D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "accidentes.total_eventos"
+            "metadata": "_Medidas.% Eventos"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "126.75062338520603D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_ubicacion.estado"
           }
         }
       ],
       "grid": [
         {
           "properties": {
-            "gridHorizontal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "textSize": {
               "expr": {
                 "Literal": {
@@ -235,36 +227,17 @@
                 }
               }
             },
-            "rowPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            },
-            "gridVertical": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "outlineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
             "outlineStyle": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -293,6 +266,20 @@
                   "Value": "true"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "showExpandCollapseButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -314,6 +301,34 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Column"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Row"
           }
         }
       ],
@@ -346,22 +361,10 @@
       "values": [
         {
           "properties": {
-            "wordWrap": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "backColorSecondary": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "10D"
                 }
               }
             }
@@ -389,7 +392,20 @@
             "name": {
               "expr": {
                 "Literal": {
-                  "Value": "'Default'"
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -398,5 +414,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "38da2037b62270da975e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_ubicacion"
+              }
+            },
+            "Property": "estado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9da2fc4058181543fb43",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "anio"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f8433b262e78d169cd5e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Total Eventos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0347609b2aff1decc5bb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "% Eventos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

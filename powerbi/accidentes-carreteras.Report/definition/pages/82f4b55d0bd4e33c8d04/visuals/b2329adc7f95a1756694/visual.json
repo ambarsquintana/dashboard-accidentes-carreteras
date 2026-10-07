@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "b2329adc7f95a1756694",
   "position": {
-    "x": 981.11111111111109,
-    "y": 26.666666666666664,
-    "z": 11000,
-    "height": 36.666666666666664,
-    "width": 258.88888888888886,
-    "tabOrder": 11000
+    "x": 981.24688279301745,
+    "y": 30.523690773067329,
+    "z": 6000,
+    "height": 28.728179551122192,
+    "width": 249.57605985037407,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -17,29 +17,19 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "accidentes"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Fecha"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Level": "Year"
+                  "Property": "anio"
                 }
               },
-              "queryRef": "registro_acidente.Fecha.Variación.Date Hierarchy.Year",
-              "nativeQueryRef": "Fecha Year",
-              "active": true
+              "queryRef": "dim_calendario.anio",
+              "nativeQueryRef": "Año",
+              "active": true,
+              "displayName": "Año"
             }
           ]
         }
@@ -48,24 +38,13 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "accidentes"
-                          }
-                        },
-                        "Name": "Variación",
-                        "Property": "Fecha"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Entity": "dim_calendario"
                   }
                 },
-                "Level": "Year"
+                "Property": "anio"
               }
             },
             "direction": "Ascending"
@@ -96,108 +75,6 @@
                 "Literal": {
                   "Value": "1D"
                 }
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "l",
-                    "Entity": "LocalDateTable_4e693788-ca7b-4254-a8c1-932659c00430",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "l"
-                                }
-                              },
-                              "Property": "Year"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2020L"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "PropertyVariationSource": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "accidentes"
-                                        }
-                                      },
-                                      "Name": "Variación",
-                                      "Property": "Fecha"
-                                    }
-                                  },
-                                  "Hierarchy": "Date Hierarchy"
-                                }
-                              },
-                              "Level": "Year"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2020L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "LocalDateTable_4e693788-ca7b-4254-a8c1-932659c00430"
-                                    }
-                                  },
-                                  "Property": "Year"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "2020"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
               }
             }
           }
@@ -357,5 +234,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ab045a26a594188e47f3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "anio"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

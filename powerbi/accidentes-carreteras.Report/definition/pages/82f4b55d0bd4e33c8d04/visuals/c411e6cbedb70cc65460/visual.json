@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "c411e6cbedb70cc65460",
   "position": {
-    "x": 785,
-    "y": 318.33333333333337,
-    "z": 14000,
-    "height": 380,
-    "width": 473.33333333333337,
-    "tabOrder": 14000
+    "x": 784.63840399002493,
+    "y": 320.49875311720695,
+    "z": 9000,
+    "height": 377.95511221945134,
+    "width": 475.81047381546131,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "map",
@@ -17,22 +17,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "accidentes"
-                        }
-                      },
-                      "Property": "id"
+                    "SourceRef": {
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Eventos"
                 }
               },
-              "queryRef": "Sum(accidentes.id)",
-              "nativeQueryRef": "Suma de id"
+              "queryRef": "_Medidas.Total Eventos",
+              "nativeQueryRef": "Total Eventos"
             }
           ]
         },
@@ -43,14 +38,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "fact_accidentes"
                     }
                   },
-                  "Property": "longitude"
+                  "Property": "longitud"
                 }
               },
-              "queryRef": "accidentes.longitude",
-              "nativeQueryRef": "longitude"
+              "queryRef": "fact_accidentes.longitud",
+              "nativeQueryRef": "longitud"
             }
           ]
         },
@@ -61,14 +56,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "fact_accidentes"
                     }
                   },
-                  "Property": "latitude"
+                  "Property": "latitud"
                 }
               },
-              "queryRef": "accidentes.latitude",
-              "nativeQueryRef": "latitude"
+              "queryRef": "fact_accidentes.latitud",
+              "nativeQueryRef": "latitud"
             }
           ]
         }
@@ -104,6 +99,37 @@
                   "Value": "false"
                 }
               }
+            },
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -120,10 +146,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "accidentes"
+                                  "Entity": "fact_accidentes"
                                 }
                               },
-                              "Property": "latitude"
+                              "Property": "latitud"
                             }
                           },
                           "Function": 0
@@ -250,6 +276,54 @@
                   "Value": "7D"
                 }
               }
+            },
+            "unit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'pixels'"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "autoZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showZoomButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showLassoButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "geocodingCulture": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
             }
           }
         }
@@ -281,8 +355,94 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "showSentenceFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showTooltipFieldsOnly": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showActionsInTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "47c9d4f4fd47e08dcd7a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Total Eventos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5e2cdc2f8afe9032f9b6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_accidentes"
+              }
+            },
+            "Property": "longitud"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4dc7cedacdff2ef71dc1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_accidentes"
+              }
+            },
+            "Property": "latitud"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

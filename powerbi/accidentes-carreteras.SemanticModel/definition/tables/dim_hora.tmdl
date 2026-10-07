@@ -1,0 +1,38 @@
+/// Las 24 horas del día.
+table dim_hora
+	lineageTag: 098d386c-9bf1-525b-a122-935b656e0794
+
+	/// Hora del día (0-23)
+	column hora
+		dataType: int64
+		isKey
+		formatString: 00":00"
+		lineageTag: cd1657bd-5e36-5c6c-9b31-f95218c33932
+		summarizeBy: none
+		sourceColumn: hora
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	/// Hora en formato de reloj, para ejes y filtros
+	column etiqueta
+		dataType: string
+		lineageTag: 14540c60-5e1d-5165-9a3c-0f7d22223916
+		summarizeBy: none
+		sourceColumn: etiqueta
+		sortByColumn: hora
+
+		annotation SummarizationSetBy = User
+
+	partition dim_hora = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents(RutaProyecto & "\data\gold\dim_hora.parquet")),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen, {{"hora", Int64.Type}, {"etiqueta", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

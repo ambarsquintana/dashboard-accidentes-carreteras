@@ -2,651 +2,14 @@ cultureInfo en-US
 
 	linguisticMetadata =
 			{
-			  "Version": "3.5.0",
+			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "accidente": {
+			    "entity__medida.total_eventos": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "accidentes"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "accidente": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.id": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "id"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "id": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "identification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "identity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "credential": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        }
-			      ],
-			      "NameType": "Identifier"
-			    },
-			    "accidente.fecha": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "Fecha"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "accidente.fecha.variación.date_hierarchy": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "VariationSource": "Fecha",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Date Hierarchy"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha date hierarchy": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date hierarchy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "accidente.fecha.variación.date_hierarchy.year": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "VariationSource": "Fecha",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Year"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "year": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "fecha yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "accidente.fecha.variación.date_hierarchy.quarter": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "VariationSource": "Fecha",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Quarter"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "quarter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "fecha qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.833
-			          }
-			        },
-			        {
-			          "qtr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.818
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "accidente.fecha.variación.date_hierarchy.month": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "VariationSource": "Fecha",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Month"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "fecha mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "accidente.fecha.variación.date_hierarchy.day": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "VariationSource": "Fecha",
-			          "VariationSet": "Variación",
-			          "Hierarchy": "Date Hierarchy",
-			          "HierarchyLevel": "Day"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha day": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "day": {
-			            "State": "Generated"
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "accidente.hora": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "hora"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "hora": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "time": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "accidente.uf": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "uf"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "uf": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Estado": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.causa_accidente": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "causa_accidente"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "causa accidente": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "causa_accidente": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.clasificación_accidente": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "clasificación_accidente"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "clasificación accidente": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "clasificación_accidente": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.tipo_pista": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "tipo_pista"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "tipo pista": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "tipo_pista": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.muerto": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "Muertos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "muerto": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.herido": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "Heridos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "herido": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.latitude": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "latitude"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "latitude": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "leeway": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "freedom": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "autonomy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "liberty": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "opportunity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "room": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "scope": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "space": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "rope": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "location": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.longitude": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "longitude"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "longitude": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.dia_semana": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "dia_semana"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dia semana": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "dia_semana": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.numero_dia_semana": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "numero_dia_semana"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "numero dia semana": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "numero_dia_semana": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.numero_me": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "numero_mes"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "numero me": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "numero_mes": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.me": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "mes"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "me": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.total_eventos": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "total_eventos"
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Total Eventos"
 			        }
 			      },
 			      "State": "Generated",
@@ -654,13 +17,6 @@ cultureInfo en-US
 			        {
 			          "total eventos": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "total_eventos": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        },
 			        {
@@ -692,14 +48,70 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "accidente.total_heridos": {
+			    "entity__medida.eventos": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "total_heridos"
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Eventos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% eventos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage evento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "pct evento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.total_heridos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Total Heridos"
 			        }
 			      },
 			      "State": "Generated",
@@ -707,13 +119,6 @@ cultureInfo en-US
 			        {
 			          "total heridos": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "total_heridos": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        },
 			        {
@@ -748,29 +153,138 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "accidente.total_muertes": {
+			    "dim_caracteristica.clasificacion_accidente": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "total_muertes"
+			          "ConceptualEntity": "dim_caracteristicas",
+			          "ConceptualProperty": "clasificacion_accidente"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total muertes": {
+			          "clasificacion accidente": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "total_muertes": {
+			          "clasificacion_accidente": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "aggregate muerte": {
+			          "Clasificación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion.estado_sigla": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion",
+			          "ConceptualProperty": "estado_sigla"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado sigla": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estado_sigla": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.anio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "anio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Año": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.columna": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Columna"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "columna": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.total_fallecidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Total Fallecidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total fallecidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate fallecido": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -780,7 +294,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "overall muerte": {
+			          "overall fallecido": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -788,28 +302,672 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "Fallecidos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "totale": {
+			    "fact_accidente": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Totales"
+			          "ConceptualEntity": "fact_accidentes"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "totale": {
+			          "fact accidente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fact_accidentes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_accidente.accidente_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "accidente_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "accidente id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "accidente_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "accidente identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "accidente identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "accidente identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "accidente credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_accidente.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_accidente.hora": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "hora"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "hora": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "totale.me": {
+			    "fact_accidente.ubicacion_key": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Totales",
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "ubicacion_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ubicacion key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ubicacion_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ubicacion solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion answer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "ubicacion mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "ubicacion secret": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "ubicacion source": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "fact_accidente.causa_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "causa_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "causa key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "causa_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "causa solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa answer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "causa mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "causa secret": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "causa source": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "fact_accidente.caracteristicas_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "caracteristicas_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "caracteristicas key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "caracteristica key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "caracteristicas_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "caracteristica solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica answer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "caracteristica mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "caracteristica secret": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "caracteristica source": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "fact_accidente.muerto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "muertos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "muerto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_accidente.herido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "heridos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "herido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_accidente.latitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "latitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_accidente.longitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_accidentes",
+			          "ConceptualProperty": "longitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "longitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_calendario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
 			          "ConceptualProperty": "mes"
 			        }
 			      },
@@ -822,151 +980,55 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "totale.total_accidente": {
+			    "dim_calendario.nombre_me": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Totales",
-			          "ConceptualProperty": "Total_Accidentes"
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "nombre_mes"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total accidente": {
+			          "nombre me": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Total_Accidentes": {
+			          "nombre_mes": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "aggregate accidente": {
-			            "Type": "Noun",
+			          "Mes": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "overall accidente": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "totale.total_herido": {
+			    "dim_calendario.dia_semana": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Totales",
-			          "ConceptualProperty": "Total_Heridos"
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "dia_semana"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total herido": {
+			          "dia semana": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Total_Heridos": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "aggregate herido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "overall herido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.accidentes_mas_tres_victimas": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "accidentes_mas_tres_victimas_total"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "accidentes mas tres victimas total": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "accidentes_mas_tres_victimas_total": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "accidente ma tre victima aggregate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.757
-			          }
-			        },
-			        {
-			          "accidente ma tre victima overall": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.757
-			          }
-			        }
-			      ]
-			    },
-			    "accidente.porcentaje_accidentes_mas_tres_victimas": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "accidentes_mas_tres_victimas_porcentaje"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "accidentes mas tres victimas porcentaje": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "accidentes_mas_tres_victimas_porcentaje": {
+			          "dia_semana": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -974,29 +1036,623 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "accidente.porcentaje_eventos": {
+			    "dim_calendario.nombre_dia_semana": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "accidentes",
-			          "ConceptualProperty": "porcentaje_eventos"
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "nombre_dia_semana"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "porcentaje eventos": {
+			          "nombre dia semana": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "porcentaje_eventos": {
+			          "nombre_dia_semana": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "%": {
+			          "Día": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_hora": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_hora"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim hora": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_hora": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_hora.hora": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_hora",
+			          "ConceptualProperty": "hora"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_hora.etiqueta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_hora",
+			          "ConceptualProperty": "etiqueta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "etiqueta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim ubicacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_ubicacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion.ubicacion_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion",
+			          "ConceptualProperty": "ubicacion_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ubicacion key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ubicacion_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ubicacion solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "ubicacion answer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "ubicacion mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "ubicacion secret": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "ubicacion source": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ubicacion.estado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ubicacion",
+			          "ConceptualProperty": "estado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "state or province": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "dim_causa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_causa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim causa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_causa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_causa.causa_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_causa",
+			          "ConceptualProperty": "causa_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "causa key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "causa_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "causa solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "causa answer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "causa mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "causa secret": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "causa source": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "dim_causa.causa_accidente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_causa",
+			          "ConceptualProperty": "causa_accidente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "causa accidente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "causa_accidente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Causa del accidente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_caracteristica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_caracteristicas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim caracteristica": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_caracteristicas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_caracteristica.caracteristicas_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_caracteristicas",
+			          "ConceptualProperty": "caracteristicas_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "caracteristicas key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "caracteristica key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "caracteristicas_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "caracteristica solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "caracteristica answer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "caracteristica mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "caracteristica secret": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "caracteristica source": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "dim_caracteristica.tipo_carril": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_caracteristicas",
+			          "ConceptualProperty": "tipo_carril"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo carril": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_carril": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Carril": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1009,20 +1665,20 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
-			    "accidente_fecha_variación_date_hierarchy_has_month": {
+			    "fact_accidente_has_dim_caracteristica": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente.fecha.variación.date_hierarchy": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.fecha.variación.date_hierarchy.month": {
+			        "dim_caracteristica": {
 			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy.month"
+			            "Entity": "dim_caracteristica"
 			          }
 			        }
 			      },
@@ -1030,32 +1686,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente.fecha.variación.date_hierarchy"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.fecha.variación.date_hierarchy.month"
+			              "Role": "dim_caracteristica"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_months"
+			          "ID": "fact_accidentes_have_dim_caracteristicas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_caracteristica"
+			            },
+			            "Object": {
+			              "Role": "fact_accidente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_caracteristicas_have_fact_accidentes"
 			        }
 			      ]
 			    },
-			    "accidente_fecha_variación_date_hierarchy_has_quarter": {
+			    "fact_accidente_has_dim_causa": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente.fecha.variación.date_hierarchy": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.fecha.variación.date_hierarchy.quarter": {
+			        "dim_causa": {
 			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy.quarter"
+			            "Entity": "dim_causa"
 			          }
 			        }
 			      },
@@ -1063,32 +1732,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente.fecha.variación.date_hierarchy"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.fecha.variación.date_hierarchy.quarter"
+			              "Role": "dim_causa"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
+			          "ID": "fact_accidentes_have_dim_causas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_causa"
+			            },
+			            "Object": {
+			              "Role": "fact_accidente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_causas_have_fact_accidentes"
 			        }
 			      ]
 			    },
-			    "accidente_fecha_variación_date_hierarchy_has_year": {
+			    "fact_accidente_has_dim_ubicacion": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente.fecha.variación.date_hierarchy": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.fecha.variación.date_hierarchy.year": {
+			        "dim_ubicacion": {
 			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy.year"
+			            "Entity": "dim_ubicacion"
 			          }
 			        }
 			      },
@@ -1096,32 +1778,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente.fecha.variación.date_hierarchy"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.fecha.variación.date_hierarchy.year"
+			              "Role": "dim_ubicacion"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_years"
+			          "ID": "fact_accidentes_have_dim_ubicacions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ubicacion"
+			            },
+			            "Object": {
+			              "Role": "fact_accidente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ubicacions_have_fact_accidentes"
 			        }
 			      ]
 			    },
-			    "accidente_fecha_has_variación_date_hierarchy": {
+			    "fact_accidente_has_dim_hora": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente.fecha": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente.fecha"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.fecha.variación.date_hierarchy": {
+			        "dim_hora": {
 			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy"
+			            "Entity": "dim_hora"
 			          }
 			        }
 			      },
@@ -1129,32 +1824,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente.fecha"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.fecha.variación.date_hierarchy"
+			              "Role": "dim_hora"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fechas_have_fecha_date_hierarchies"
+			          "ID": "fact_accidentes_have_dim_horas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_accidente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_horas_have_fact_accidentes"
 			        }
 			      ]
 			    },
-			    "accidente_has_porcentaje_eventos": {
+			    "fact_accidente_has_dim_calendario": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.porcentaje_eventos": {
+			        "dim_calendario": {
 			          "Target": {
-			            "Entity": "accidente.porcentaje_eventos"
+			            "Entity": "dim_calendario"
 			          }
 			        }
 			      },
@@ -1162,32 +1870,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.porcentaje_eventos"
+			              "Role": "dim_calendario"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_porcentaje_eventos"
+			          "ID": "fact_accidentes_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "fact_accidente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fact_accidentes"
 			        }
 			      ]
 			    },
-			    "accidente_has_porcentaje_accidentes_mas_tres_victimas": {
+			    "dim_caracteristica_has_tipo_carril": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_caracteristicas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_caracteristica": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_caracteristica"
 			          }
 			        },
-			        "accidente.porcentaje_accidentes_mas_tres_victimas": {
+			        "dim_caracteristica.tipo_carril": {
 			          "Target": {
-			            "Entity": "accidente.porcentaje_accidentes_mas_tres_victimas"
+			            "Entity": "dim_caracteristica.tipo_carril"
 			          }
 			        }
 			      },
@@ -1195,32 +1916,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_caracteristica"
 			            },
 			            "Object": {
-			              "Role": "accidente.porcentaje_accidentes_mas_tres_victimas"
+			              "Role": "dim_caracteristica.tipo_carril"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_accidentes_mas_tres_victimas_porcentaje"
+			          "ID": "dim_caracteristicas_have_tipo_carrils"
 			        }
 			      ]
 			    },
-			    "accidente_has_accidentes_mas_tres_victimas": {
+			    "dim_causa_has_causa_accidente": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_causa"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_causa": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_causa"
 			          }
 			        },
-			        "accidente.accidentes_mas_tres_victimas": {
+			        "dim_causa.causa_accidente": {
 			          "Target": {
-			            "Entity": "accidente.accidentes_mas_tres_victimas"
+			            "Entity": "dim_causa.causa_accidente"
 			          }
 			        }
 			      },
@@ -1228,32 +1949,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_causa"
 			            },
 			            "Object": {
-			              "Role": "accidente.accidentes_mas_tres_victimas"
+			              "Role": "dim_causa.causa_accidente"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_accidentes_mas_tres_victimas_total"
+			          "ID": "dim_causas_have_causa_accidentes"
 			        }
 			      ]
 			    },
-			    "totale_has_total_herido": {
+			    "dim_ubicacion_has_estado": {
 			      "Binding": {
-			        "ConceptualEntity": "Totales"
+			        "ConceptualEntity": "dim_ubicacion"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "totale": {
+			        "dim_ubicacion": {
 			          "Target": {
-			            "Entity": "totale"
+			            "Entity": "dim_ubicacion"
 			          }
 			        },
-			        "totale.total_herido": {
+			        "dim_ubicacion.estado": {
 			          "Target": {
-			            "Entity": "totale.total_herido"
+			            "Entity": "dim_ubicacion.estado"
 			          }
 			        }
 			      },
@@ -1261,32 +1982,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "totale"
+			              "Role": "dim_ubicacion"
 			            },
 			            "Object": {
-			              "Role": "totale.total_herido"
+			              "Role": "dim_ubicacion.estado"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "totales_have_total_heridos"
+			          "ID": "dim_ubicacions_have_estado"
 			        }
 			      ]
 			    },
-			    "totale_has_total_accidente": {
+			    "dim_hora_has_etiqueta": {
 			      "Binding": {
-			        "ConceptualEntity": "Totales"
+			        "ConceptualEntity": "dim_hora"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "totale": {
+			        "dim_hora": {
 			          "Target": {
-			            "Entity": "totale"
+			            "Entity": "dim_hora"
 			          }
 			        },
-			        "totale.total_accidente": {
+			        "dim_hora.etiqueta": {
 			          "Target": {
-			            "Entity": "totale.total_accidente"
+			            "Entity": "dim_hora.etiqueta"
 			          }
 			        }
 			      },
@@ -1294,32 +2015,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "totale"
+			              "Role": "dim_hora"
 			            },
 			            "Object": {
-			              "Role": "totale.total_accidente"
+			              "Role": "dim_hora.etiqueta"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "totales_have_total_accidentes"
+			          "ID": "dim_horas_have_etiquetas"
 			        }
 			      ]
 			    },
-			    "totale_has_me": {
+			    "dim_hora_has_hora": {
 			      "Binding": {
-			        "ConceptualEntity": "Totales"
+			        "ConceptualEntity": "dim_hora"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "totale": {
+			        "dim_hora": {
 			          "Target": {
-			            "Entity": "totale"
+			            "Entity": "dim_hora"
 			          }
 			        },
-			        "totale.me": {
+			        "dim_hora.hora": {
 			          "Target": {
-			            "Entity": "totale.me"
+			            "Entity": "dim_hora.hora"
 			          }
 			        }
 			      },
@@ -1327,32 +2048,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "totale"
+			              "Role": "dim_hora"
 			            },
 			            "Object": {
-			              "Role": "totale.me"
+			              "Role": "dim_hora.hora"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "totales_have_me"
+			          "ID": "dim_horas_have_horas"
 			        }
 			      ]
 			    },
-			    "accidente_has_total_muertes": {
+			    "dim_calendario_has_nombre_dia_semana": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_calendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_calendario": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "accidente.total_muertes": {
+			        "dim_calendario.nombre_dia_semana": {
 			          "Target": {
-			            "Entity": "accidente.total_muertes"
+			            "Entity": "dim_calendario.nombre_dia_semana"
 			          }
 			        }
 			      },
@@ -1360,32 +2081,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "accidente.total_muertes"
+			              "Role": "dim_calendario.nombre_dia_semana"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_total_muertes"
+			          "ID": "dim_calendarios_have_nombre_dia_semanas"
 			        }
 			      ]
 			    },
-			    "accidente_has_total_heridos": {
+			    "dim_calendario_has_dia_semana": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_calendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_calendario": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "accidente.total_heridos": {
+			        "dim_calendario.dia_semana": {
 			          "Target": {
-			            "Entity": "accidente.total_heridos"
+			            "Entity": "dim_calendario.dia_semana"
 			          }
 			        }
 			      },
@@ -1393,32 +2114,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "accidente.total_heridos"
+			              "Role": "dim_calendario.dia_semana"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_total_heridos"
+			          "ID": "dim_calendarios_have_dia_semanas"
 			        }
 			      ]
 			    },
-			    "accidente_has_total_eventos": {
+			    "dim_calendario_has_nombre_me": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_calendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_calendario": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "accidente.total_eventos": {
+			        "dim_calendario.nombre_me": {
 			          "Target": {
-			            "Entity": "accidente.total_eventos"
+			            "Entity": "dim_calendario.nombre_me"
 			          }
 			        }
 			      },
@@ -1426,32 +2147,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "accidente.total_eventos"
+			              "Role": "dim_calendario.nombre_me"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_total_eventos"
+			          "ID": "dim_calendarios_have_nombre_me"
 			        }
 			      ]
 			    },
-			    "accidente_has_me": {
+			    "dim_calendario_has_me": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_calendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_calendario": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "accidente.me": {
+			        "dim_calendario.me": {
 			          "Target": {
-			            "Entity": "accidente.me"
+			            "Entity": "dim_calendario.me"
 			          }
 			        }
 			      },
@@ -1459,32 +2180,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "accidente.me"
+			              "Role": "dim_calendario.me"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_me"
+			          "ID": "dim_calendarios_have_me"
 			        }
 			      ]
 			    },
-			    "accidente_has_numero_me": {
+			    "dim_calendario_has_trimestre": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_calendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_calendario": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "accidente.numero_me": {
+			        "dim_calendario.trimestre": {
 			          "Target": {
-			            "Entity": "accidente.numero_me"
+			            "Entity": "dim_calendario.trimestre"
 			          }
 			        }
 			      },
@@ -1492,32 +2213,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "accidente.numero_me"
+			              "Role": "dim_calendario.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_numero_me"
+			          "ID": "dim_calendarios_have_trimestres"
 			        }
 			      ]
 			    },
-			    "accidente_has_numero_dia_semana": {
+			    "dim_calendario_has_fecha": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_calendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_calendario": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "accidente.numero_dia_semana": {
+			        "dim_calendario.fecha": {
 			          "Target": {
-			            "Entity": "accidente.numero_dia_semana"
+			            "Entity": "dim_calendario.fecha"
 			          }
 			        }
 			      },
@@ -1525,32 +2246,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "accidente.numero_dia_semana"
+			              "Role": "dim_calendario.fecha"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_numero_dia_semanas"
+			          "ID": "dim_calendarios_have_fechas"
 			        }
 			      ]
 			    },
-			    "accidente_has_dia_semana": {
+			    "fact_accidente_has_longitud": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.dia_semana": {
+			        "fact_accidente.longitud": {
 			          "Target": {
-			            "Entity": "accidente.dia_semana"
+			            "Entity": "fact_accidente.longitud"
 			          }
 			        }
 			      },
@@ -1558,32 +2279,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.dia_semana"
+			              "Role": "fact_accidente.longitud"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_dia_semanas"
+			          "ID": "fact_accidentes_have_longituds"
 			        }
 			      ]
 			    },
-			    "accidente_has_longitude": {
+			    "fact_accidente_has_latitud": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.longitude": {
+			        "fact_accidente.latitud": {
 			          "Target": {
-			            "Entity": "accidente.longitude"
+			            "Entity": "fact_accidente.latitud"
 			          }
 			        }
 			      },
@@ -1591,32 +2312,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.longitude"
+			              "Role": "fact_accidente.latitud"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_longitudes"
+			          "ID": "fact_accidentes_have_latituds"
 			        }
 			      ]
 			    },
-			    "accidente_has_latitude": {
+			    "fact_accidente_has_entity__medida_total_fallecidos": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.latitude": {
+			        "entity__medida.total_fallecidos": {
 			          "Target": {
-			            "Entity": "accidente.latitude"
+			            "Entity": "entity__medida.total_fallecidos"
 			          }
 			        }
 			      },
@@ -1624,32 +2345,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.latitude"
+			              "Role": "entity__medida.total_fallecidos"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_latitudes"
+			          "ID": "fact_accidentes_have_total_fallecidos"
 			        }
 			      ]
 			    },
-			    "accidente_has_herido": {
+			    "dim_calendario_has_anio": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_calendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_calendario": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_calendario"
 			          }
 			        },
-			        "accidente.herido": {
+			        "dim_calendario.anio": {
 			          "Target": {
-			            "Entity": "accidente.herido"
+			            "Entity": "dim_calendario.anio"
 			          }
 			        }
 			      },
@@ -1657,32 +2378,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_calendario"
 			            },
 			            "Object": {
-			              "Role": "accidente.herido"
+			              "Role": "dim_calendario.anio"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_heridos"
+			          "ID": "dim_calendarios_have_anios"
 			        }
 			      ]
 			    },
-			    "accidente_has_muerto": {
+			    "dim_ubicacion_has_estado_sigla": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_ubicacion"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_ubicacion": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_ubicacion"
 			          }
 			        },
-			        "accidente.muerto": {
+			        "dim_ubicacion.estado_sigla": {
 			          "Target": {
-			            "Entity": "accidente.muerto"
+			            "Entity": "dim_ubicacion.estado_sigla"
 			          }
 			        }
 			      },
@@ -1690,32 +2411,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_ubicacion"
 			            },
 			            "Object": {
-			              "Role": "accidente.muerto"
+			              "Role": "dim_ubicacion.estado_sigla"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_muertos"
+			          "ID": "dim_ubicacions_have_estado_siglas"
 			        }
 			      ]
 			    },
-			    "accidente_has_tipo_pista": {
+			    "dim_caracteristica_has_clasificacion_accidente": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_caracteristicas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_caracteristica": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_caracteristica"
 			          }
 			        },
-			        "accidente.tipo_pista": {
+			        "dim_caracteristica.clasificacion_accidente": {
 			          "Target": {
-			            "Entity": "accidente.tipo_pista"
+			            "Entity": "dim_caracteristica.clasificacion_accidente"
 			          }
 			        }
 			      },
@@ -1723,32 +2444,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_caracteristica"
 			            },
 			            "Object": {
-			              "Role": "accidente.tipo_pista"
+			              "Role": "dim_caracteristica.clasificacion_accidente"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_tipo_pistas"
+			          "ID": "dim_caracteristicas_have_clasificacion_accidentes"
 			        }
 			      ]
 			    },
-			    "accidente_has_clasificación_accidente": {
+			    "fact_accidente_has_entity__medida_total_heridos": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.clasificación_accidente": {
+			        "entity__medida.total_heridos": {
 			          "Target": {
-			            "Entity": "accidente.clasificación_accidente"
+			            "Entity": "entity__medida.total_heridos"
 			          }
 			        }
 			      },
@@ -1756,32 +2477,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.clasificación_accidente"
+			              "Role": "entity__medida.total_heridos"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_clasificación_accidentes"
+			          "ID": "fact_accidentes_have_total_heridos"
 			        }
 			      ]
 			    },
-			    "accidente_has_causa_accidente": {
+			    "fact_accidente_has_entity__medida_eventos": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.causa_accidente": {
+			        "entity__medida.eventos": {
 			          "Target": {
-			            "Entity": "accidente.causa_accidente"
+			            "Entity": "entity__medida.eventos"
 			          }
 			        }
 			      },
@@ -1789,32 +2510,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.causa_accidente"
+			              "Role": "entity__medida.eventos"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_causa_accidentes"
+			          "ID": "fact_accidentes_have__eventos"
 			        }
 			      ]
 			    },
-			    "accidente_has_uf": {
+			    "fact_accidente_has_entity__medida_total_eventos": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "fact_accidentes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "fact_accidente": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "fact_accidente"
 			          }
 			        },
-			        "accidente.uf": {
+			        "entity__medida.total_eventos": {
 			          "Target": {
-			            "Entity": "accidente.uf"
+			            "Entity": "entity__medida.total_eventos"
 			          }
 			        }
 			      },
@@ -1822,162 +2543,67 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "fact_accidente"
 			            },
 			            "Object": {
-			              "Role": "accidente.uf"
+			              "Role": "entity__medida.total_eventos"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_ufs"
+			          "ID": "fact_accidentes_have_total_eventos"
 			        }
 			      ]
 			    },
-			    "accidente_has_hora": {
+			    "dim_ubicacion_in_estado": {
 			      "Binding": {
-			        "ConceptualEntity": "accidentes"
+			        "ConceptualEntity": "dim_ubicacion"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "accidente": {
+			        "dim_ubicacion": {
 			          "Target": {
-			            "Entity": "accidente"
+			            "Entity": "dim_ubicacion"
 			          }
 			        },
-			        "accidente.hora": {
+			        "dim_ubicacion.estado": {
 			          "Target": {
-			            "Entity": "accidente.hora"
+			            "Entity": "dim_ubicacion.estado"
 			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_ubicacion.estado"
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Preposition": {
 			            "Subject": {
-			              "Role": "accidente"
+			              "Role": "dim_ubicacion"
 			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
 			            "Object": {
-			              "Role": "accidente.hora"
+			              "Role": "dim_ubicacion.estado"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "accidentes_have_horas"
+			          "ID": "dim_ubicacions_are_in_estado"
 			        }
 			      ]
-			    },
-			    "accidente_has_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "accidentes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "accidente": {
-			          "Target": {
-			            "Entity": "accidente"
-			          }
-			        },
-			        "accidente.fecha": {
-			          "Target": {
-			            "Entity": "accidente.fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "accidente"
-			            },
-			            "Object": {
-			              "Role": "accidente.fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "accidentes_have_fechas"
-			        }
-			      ]
-			    },
-			    "accidente_has_id": {
-			      "Binding": {
-			        "ConceptualEntity": "accidentes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "accidente": {
-			          "Target": {
-			            "Entity": "accidente"
-			          }
-			        },
-			        "accidente.id": {
-			          "Target": {
-			            "Entity": "accidente.id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "accidente"
-			            },
-			            "Object": {
-			              "Role": "accidente.id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "accidentes_have_ids"
-			        },
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "accidente"
-			            },
-			            "Name": {
-			              "Role": "accidente.id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ids_are_names_IDs_of_accidentes"
-			        }
-			      ]
-			    },
-			    "accidente_fecha_variación_date_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "accidentes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "accidente.fecha.variación.date_hierarchy": {
-			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy"
-			          }
-			        },
-			        "accidente.fecha.variación.date_hierarchy.day": {
-			          "Target": {
-			            "Entity": "accidente.fecha.variación.date_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "accidente.fecha.variación.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "accidente.fecha.variación.date_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_date_hierarchies_have_fecha_days"
-			        }
-			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
 			    }
 			  }
 			}

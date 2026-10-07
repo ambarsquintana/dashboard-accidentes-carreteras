@@ -1,0 +1,89 @@
+/// Un día por fila, del 1 de enero de 2018 al 31 de diciembre de 2020. Tabla de fechas del modelo.
+table dim_calendario
+	lineageTag: 2de7b2f4-a2a2-5c74-a83f-26dc6d9330c2
+	dataCategory: Time
+
+	/// Día calendario
+	column fecha
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 59b6aaa4-8e8a-5c86-9055-cbe82820875c
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Año
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: d8f40dd2-18ac-55fb-9e3d-a06f700232c2
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = User
+
+	/// Trimestre del año (1-4)
+	column trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: fd0f120a-d0cd-55a8-a7ab-6de416ed7573
+		summarizeBy: none
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = User
+
+	/// Número del mes (1-12). Ordena nombre_mes
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 8effa4de-4748-5342-9bcc-b8ce351a2228
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = User
+
+	/// Nombre abreviado del mes
+	column nombre_mes
+		dataType: string
+		lineageTag: b76faca1-7d3b-51da-854b-c0004c321f82
+		summarizeBy: none
+		sourceColumn: nombre_mes
+		sortByColumn: mes
+
+		annotation SummarizationSetBy = User
+
+	/// Número del día de la semana, de 1 (lunes) a 7 (domingo). Ordena nombre_dia_semana
+	column dia_semana
+		dataType: int64
+		formatString: 0
+		lineageTag: 56198233-0962-5f4e-bcb8-4876faae2c17
+		summarizeBy: none
+		sourceColumn: dia_semana
+
+		annotation SummarizationSetBy = User
+
+	/// Nombre abreviado del día de la semana
+	column nombre_dia_semana
+		dataType: string
+		lineageTag: 32fcb5c5-7268-5e4f-bcad-7e67608bdeb2
+		summarizeBy: none
+		sourceColumn: nombre_dia_semana
+		sortByColumn: dia_semana
+
+		annotation SummarizationSetBy = User
+
+	partition dim_calendario = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents(RutaProyecto & "\data\gold\dim_calendario.parquet")),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen, {{"fecha", type date}, {"anio", Int64.Type}, {"trimestre", Int64.Type}, {"mes", Int64.Type}, {"nombre_mes", type text}, {"dia_semana", Int64.Type}, {"nombre_dia_semana", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

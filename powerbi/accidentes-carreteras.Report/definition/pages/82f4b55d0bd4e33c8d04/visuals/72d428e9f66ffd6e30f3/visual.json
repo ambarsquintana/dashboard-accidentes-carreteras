@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "72d428e9f66ffd6e30f3",
   "position": {
-    "x": 501.11111111111109,
-    "y": 26.666666666666664,
-    "z": 10000,
-    "height": 36.666666666666664,
-    "width": 418.88888888888886,
-    "tabOrder": 10000
+    "x": 502.7431421446384,
+    "y": 30.523690773067329,
+    "z": 5000,
+    "height": 28.728179551122192,
+    "width": 405.785536159601,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "dim_caracteristicas"
                     }
                   },
-                  "Property": "clasificación_accidente"
+                  "Property": "clasificacion_accidente"
                 }
               },
-              "queryRef": "registro_acidente.clasificación_accidente",
-              "nativeQueryRef": "clasificación_accidente",
-              "active": true
+              "queryRef": "dim_caracteristicas.clasificacion_accidente",
+              "nativeQueryRef": "Clasificación",
+              "active": true,
+              "displayName": "Clasificación"
             }
           ]
         }
@@ -56,47 +57,6 @@
                 "Literal": {
                   "Value": "1D"
                 }
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "a",
-                    "Entity": "accidentes",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "a"
-                                }
-                              },
-                              "Property": "clasificación_accidente"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Sin víctimas'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
               }
             }
           }
@@ -127,7 +87,14 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "10D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -236,5 +203,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "08ccb3090e954c7357a8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_caracteristicas"
+              }
+            },
+            "Property": "clasificacion_accidente"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

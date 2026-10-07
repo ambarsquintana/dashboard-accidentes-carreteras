@@ -1,0 +1,45 @@
+/// Combinaciones de clasificación del accidente y tipo de carril.
+table dim_caracteristicas
+	lineageTag: 7ed739b2-c231-5e7e-b349-509df8b07f12
+
+	/// Llave subrogada
+	column caracteristicas_key
+		dataType: int64
+		isHidden
+		isKey
+		formatString: 0
+		lineageTag: c83662c5-ed8a-50e1-8493-40bd67cabef3
+		summarizeBy: none
+		sourceColumn: caracteristicas_key
+
+		annotation SummarizationSetBy = User
+
+	/// Gravedad del accidente: Con víctimas fatales, Con víctimas heridas o Sin víctimas
+	column clasificacion_accidente
+		dataType: string
+		lineageTag: 50dd0eec-ab45-560e-8091-eee1220dfe1d
+		summarizeBy: none
+		sourceColumn: clasificacion_accidente
+
+		annotation SummarizationSetBy = User
+
+	/// Tipo de vía: Doble, Múltiple o Simple
+	column tipo_carril
+		dataType: string
+		lineageTag: 6b7b2f49-8fce-563d-b5a2-c06e06e33c9d
+		summarizeBy: none
+		sourceColumn: tipo_carril
+
+		annotation SummarizationSetBy = User
+
+	partition dim_caracteristicas = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents(RutaProyecto & "\data\gold\dim_caracteristicas.parquet")),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen, {{"caracteristicas_key", Int64.Type}, {"clasificacion_accidente", type text}, {"tipo_carril", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

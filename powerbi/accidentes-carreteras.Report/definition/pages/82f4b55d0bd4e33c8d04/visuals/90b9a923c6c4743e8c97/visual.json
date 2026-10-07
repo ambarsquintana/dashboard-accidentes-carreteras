@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "90b9a923c6c4743e8c97",
   "position": {
-    "x": 422.5,
-    "y": 150,
-    "z": 12000,
-    "height": 155,
-    "width": 455,
-    "tabOrder": 12000
+    "x": 432.71820448877804,
+    "y": 136.45885286783042,
+    "z": 7000,
+    "height": 177.75561097256858,
+    "width": 436.30922693266831,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "lineChart",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "mes"
+                  "Property": "nombre_mes"
                 }
               },
-              "queryRef": "registro_acidente.mes1",
-              "nativeQueryRef": "mes",
-              "active": true
+              "queryRef": "dim_calendario.nombre_mes",
+              "nativeQueryRef": "Mes",
+              "active": true,
+              "displayName": "Mes"
             }
           ]
         },
@@ -39,32 +40,28 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Property": "total_eventos"
+                  "Property": "Total Eventos"
                 }
               },
-              "queryRef": "accidentes.total_eventos",
+              "queryRef": "_Medidas.Total Eventos",
               "nativeQueryRef": "Eventos",
               "displayName": "Eventos"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
+            },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "accidentes"
+                      "Entity": "_Medidas"
                     }
                   },
-                  "Property": "total_heridos"
+                  "Property": "Total Heridos"
                 }
               },
-              "queryRef": "accidentes.total_heridos",
+              "queryRef": "_Medidas.Total Heridos",
               "nativeQueryRef": "Heridos",
               "displayName": "Heridos"
             }
@@ -78,10 +75,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "accidentes"
+                    "Entity": "dim_calendario"
                   }
                 },
-                "Property": "mes"
+                "Property": "nombre_mes"
               }
             },
             "direction": "Ascending"
@@ -192,43 +189,6 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#12239e'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(registro_acidente.id)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(registro_acidente.Heridos)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
                       "Value": "'#094780'"
                     }
                   }
@@ -237,7 +197,7 @@
             }
           },
           "selector": {
-            "metadata": "accidentes.total_eventos"
+            "metadata": "_Medidas.Total Eventos"
           }
         },
         {
@@ -256,7 +216,7 @@
             }
           },
           "selector": {
-            "metadata": "accidentes.total_heridos"
+            "metadata": "_Medidas.Total Heridos"
           }
         }
       ],
@@ -267,6 +227,27 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bottom'"
+                }
+              }
+            },
+            "matchLineColor": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "legendMarkerRendering": {
+              "expr": {
+                "Literal": {
+                  "Value": "'markerOnly'"
                 }
               }
             }
@@ -302,6 +283,19 @@
         }
       ],
       "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
         {
           "properties": {
             "show": {
