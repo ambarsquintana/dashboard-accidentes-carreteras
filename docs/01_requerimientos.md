@@ -5,7 +5,7 @@
 | **Proyecto** | Seguimiento de accidentes en carreteras federales |
 | **Solicitante** | Dirección |
 | **Responsable** | Equipo de Analytics |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Fecha** | 2026-10-07 |
 
 ## Contexto
@@ -33,7 +33,7 @@ Dar a la Dirección una vista única de los accidentes en carreteras federales e
 | RF-03 | Eventos por día de la semana | Solicitud de la Dirección |
 | RF-04 | Total de fallecidos y de heridos | Solicitud de la Dirección |
 | RF-05 | Mapa con la geolocalización de los eventos | Solicitud de la Dirección |
-| RF-06 | Top 7 de causas de accidentes | Solicitud de la Dirección |
+| RF-06 | Top 5 de causas de accidentes | Solicitud de la Dirección |
 | RF-07 | Filtros por año y clasificación del accidente | Solicitud de la Dirección |
 | RF-08 | Toda la información en una sola página | Solicitud de la Dirección |
 | RF-09 | Eventos por estado, con su participación sobre el total | Propuesta de Analytics |
@@ -102,3 +102,4 @@ Además:
 |---|---|---|
 | 1.0 | 2026-10-06 | Versión inicial |
 | 1.1 | 2026-10-07 | Se alinean los requerimientos funcionales con el reporte entregado: se retiran eventos por estación del año y accidentes con más de 3 víctimas, y el filtro por mes. Se renumeran los requerimientos y se cierran las definiciones pendientes |
+| 1.2 | 2026-10-07 | RF-06 pasa de top 7 a top 5 de causas |
