@@ -4,8 +4,8 @@
 |---|---|
 | **Proyecto** | Seguimiento de accidentes en carreteras federales |
 | **Responsable** | Equipo de Analytics |
-| **Versión** | 1.1 |
-| **Fecha** | 2026-10-06 |
+| **Versión** | 1.2 |
+| **Fecha** | 2026-10-07 |
 
 Describe cómo cambia cada columna entre capas. Las reglas de silver salen de los hallazgos de [`exploration/01_perfilado_bronze.ipynb`](../exploration/01_perfilado_bronze.ipynb).
 
@@ -33,7 +33,8 @@ Proceso: `etl/02_silver.ipynb`
 | `id` | `id` | Entero | Sin cambio. Llave de la tabla |
 | `Fecha` | `fecha` | Fecha | Renombrada. Se devuelve al tipo fecha de la fuente |
 | `hora` | `hora` | Hora | Sin cambio. Conserva el tipo hora de la fuente |
-| `uf` | `estado` | Texto | Renombrada |
+| `uf` | `estado_sigla` | Texto | Renombrada |
+| `uf` | `estado` | Texto | Columna nueva: nombre del estado según la sigla |
 | `municipio` | `municipio` | Texto | Sin cambio |
 | `causa_accidente` | `causa_accidente` | Texto | Reemplazo de valores y unificación |
 | `tipo_acidente` | `tipo_accidente` | Texto | Renombrada. Reemplazo de valores |
@@ -53,7 +54,16 @@ Proceso: `etl/02_silver.ipynb`
 | `_fecha_carga` | `_fecha_carga` | Fecha y hora | Sin cambio |
 | `_archivo_origen` | `_archivo_origen` | Texto | Sin cambio |
 
-Bronze y silver tienen 22 columnas.
+Bronze tiene 22 columnas y silver 23.
+
+### Nombres de estado
+
+| `estado_sigla` | `estado` |
+|---|---|
+| ES | Espírito Santo |
+| MG | Minas Gerais |
+| RJ | Río de Janeiro |
+| SP | São Paulo |
 
 ## Silver a gold
 
@@ -65,3 +75,4 @@ Se documenta con la entrega de `etl/03_gold.ipynb`.
 |---|---|---|
 | 1.0 | 2026-10-06 | Versión inicial: fuente a bronze y bronze a silver |
 | 1.1 | 2026-10-06 | Silver conserva `fecha` y `hora` como columnas separadas; se elimina `fecha_accidente` |
+| 1.2 | 2026-10-07 | `uf` pasa a `estado_sigla`; se agrega `estado` con el nombre del estado |
