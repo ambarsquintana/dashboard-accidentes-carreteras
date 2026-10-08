@@ -5,7 +5,7 @@
 | **Proyecto** | Seguimiento de accidentes en carreteras federales |
 | **Solicitante** | Dirección |
 | **Responsable** | Equipo de Analytics |
-| **Versión** | 1.2 |
+| **Versión** | 1.3 |
 | **Fecha** | 2026-10-07 |
 
 ## Contexto
@@ -44,7 +44,7 @@ Dar a la Dirección una vista única de los accidentes en carreteras federales e
 
 | ID | Requerimiento |
 |---|---|
-| RNF-01 | El proyecto se reconstruye completo desde el repositorio: ningún paso lee rutas locales fijas |
+| RNF-01 | El proyecto se reconstruye completo desde el repositorio: el ETL usa rutas relativas y Power BI una sola ruta local, el parámetro `RutaProyecto` |
 | RNF-02 | Las cifras del reporte coinciden con las de la capa gold y con las cifras de control |
 | RNF-03 | El reporte se versiona en formato PBIP |
 | RNF-04 | El reporte sigue la plantilla visual definida en `assets/Template.png` |
@@ -103,3 +103,4 @@ Además:
 | 1.0 | 2026-10-06 | Versión inicial |
 | 1.1 | 2026-10-07 | Se alinean los requerimientos funcionales con el reporte entregado: se retiran eventos por estación del año y accidentes con más de 3 víctimas, y el filtro por mes. Se renumeran los requerimientos y se cierran las definiciones pendientes |
 | 1.2 | 2026-10-07 | RF-06 pasa de top 7 a top 5 de causas |
+| 1.3 | 2026-10-07 | RNF-01 precisa que Power BI usa una ruta local parametrizada |

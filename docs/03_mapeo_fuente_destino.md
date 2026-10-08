@@ -4,7 +4,7 @@
 |---|---|
 | **Proyecto** | Seguimiento de accidentes en carreteras federales |
 | **Responsable** | Equipo de Analytics |
-| **Versión** | 1.2 |
+| **Versión** | 1.3 |
 | **Fecha** | 2026-10-07 |
 
 Describe cómo cambia cada columna entre capas. Las reglas de silver salen de los hallazgos de [`exploration/01_perfilado_bronze.ipynb`](../exploration/01_perfilado_bronze.ipynb).
@@ -67,7 +67,40 @@ Bronze tiene 22 columnas y silver 23.
 
 ## Silver a gold
 
-Se documenta con la entrega de `etl/03_gold.ipynb`.
+Proceso: `etl/03_gold.ipynb`
+
+La tabla de silver se separa en un hecho y cinco dimensiones. La descripción de cada columna está en [`04_diccionario_datos.md`](04_diccionario_datos.md).
+
+### fact_accidentes
+
+| Columna en silver | Columna en gold | Tipo | Regla |
+|---|---|---|---|
+| `id` | `accidente_id` | Entero | Renombrada |
+| `fecha` | `fecha` | Fecha | Sin cambio. Llave a `dim_calendario` |
+| `hora` | `hora` | Entero | Se conserva solo la hora, de 0 a 23. Llave a `dim_hora` |
+| `estado_sigla` | `ubicacion_key` | Entero | Búsqueda en `dim_ubicacion` |
+| `causa_accidente` | `causa_key` | Entero | Búsqueda en `dim_causa` |
+| `clasificacion_accidente`, `tipo_carril` | `caracteristicas_key` | Entero | Búsqueda en `dim_caracteristicas` |
+| `muertos` | `muertos` | Entero | Sin cambio |
+| `heridos` | `heridos` | Entero | Sin cambio |
+| `latitud` | `latitud` | Decimal | Sin cambio |
+| `longitud` | `longitud` | Decimal | Sin cambio |
+
+### Dimensiones
+
+| Tabla | Origen en silver | Regla |
+|---|---|---|
+| `dim_ubicacion` | `estado_sigla`, `estado` | Valores distintos |
+| `dim_causa` | `causa_accidente` | Valores distintos |
+| `dim_caracteristicas` | `clasificacion_accidente`, `tipo_carril` | Combinaciones distintas presentes en los datos |
+| `dim_calendario` | `fecha` | Generada: un día por fila, del 1 de enero del primer año al 31 de diciembre del último. Año, trimestre, mes y día de la semana se derivan de la fecha |
+| `dim_hora` | Ninguno | Generada: las 24 horas del día, con su etiqueta en formato `HH:00` |
+
+Las llaves subrogadas (`ubicacion_key`, `causa_key`, `caracteristicas_key`) se numeran desde 1 según el orden alfabético de los valores.
+
+### Columnas que no pasan a gold
+
+`municipio`, `tipo_accidente`, `sentido_via`, `personas`, `heridos_leves`, `heridos_graves`, `ilesos`, `ignorados`, `vehiculos`, `_fecha_carga` y `_archivo_origen`. El reporte no las usa.
 
 ## Control de cambios
 
@@ -76,3 +109,4 @@ Se documenta con la entrega de `etl/03_gold.ipynb`.
 | 1.0 | 2026-10-06 | Versión inicial: fuente a bronze y bronze a silver |
 | 1.1 | 2026-10-06 | Silver conserva `fecha` y `hora` como columnas separadas; se elimina `fecha_accidente` |
 | 1.2 | 2026-10-07 | `uf` pasa a `estado_sigla`; se agrega `estado` con el nombre del estado |
+| 1.3 | 2026-10-07 | Se agrega el mapeo de silver a gold |

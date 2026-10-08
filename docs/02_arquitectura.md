@@ -4,8 +4,8 @@
 |---|---|
 | **Proyecto** | Seguimiento de accidentes en carreteras federales |
 | **Responsable** | Equipo de Analytics |
-| **Versión** | 1.0 |
-| **Fecha** | 2026-10-06 |
+| **Versión** | 1.1 |
+| **Fecha** | 2026-10-07 |
 
 ## Flujo de datos
 
@@ -53,6 +53,7 @@ El detalle de las transformaciones está en [`03_mapeo_fuente_destino.md`](03_ma
 | Validaciones con `assert` antes de escribir | Si una regla falla, el notebook se detiene y no se genera el archivo |
 | Reporte en PBIP y no en PBIX | El modelo y el reporte quedan como texto, y Git muestra los cambios |
 | Power BI lee solo de gold | La lógica de transformación queda en el ETL |
+| Una sola ruta local, en el parámetro `RutaProyecto` | Power Query no admite rutas relativas. Al clonar el proyecto se cambia un único valor |
 
 ## Ejecución
 
@@ -61,7 +62,7 @@ Manual, en este orden:
 1. `etl/01_bronze.ipynb`
 2. `etl/02_silver.ipynb`
 3. `etl/03_gold.ipynb`
-4. Actualizar el modelo en Power BI Desktop
+4. Abrir el reporte en Power BI Desktop, apuntar el parámetro `RutaProyecto` a la carpeta del repositorio y actualizar el modelo
 
 `exploration/01_perfilado_bronze.ipynb` se ejecuta solo cuando cambia la fuente.
 
@@ -83,3 +84,4 @@ Manual, en este orden:
 | Versión | Fecha | Cambio |
 |---|---|---|
 | 1.0 | 2026-10-06 | Versión inicial |
+| 1.1 | 2026-10-07 | Se documenta el parámetro `RutaProyecto` |
